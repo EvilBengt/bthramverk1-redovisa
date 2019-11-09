@@ -1,25 +1,41 @@
 ---
-title: "Min fina titel"
+title: "Vem är jag? | ramverk1"
 ---
-Min me-sida i kursen ramverk1
-=========================
 
-Detta innehåll är skrivet i markdown och du hittar innehållet i filen `content/index.md`.
+Vem är jag?
+===========
 
-[FIGURE src="image/me.jpg?w=400" class="right" caption="Bild på mig"]
+[FIGURE src="image/mugshot.jpg?width=200" caption="Brahälla, 2016" class="left"]
 
-Detta är min me-sida i kursen. Denna sidan innehåller en presentation av mig själv. Underhåll denna sidan under hela kursen och uppdatera den efter hand och behov.
+Anton Johnsson Håkansson. Bor och arbetar hemma på gården i Adelöv när jag inte
+sitter vid datorn. Läste Teknik på gymnasiet och gick sedan vidare till
+Systemutvecklare .NET på yrkeshögskola. När jag efter drygt en termin inte kände
+mig nöjd med upplägget och innehållet i kurserna bestämde jag mig för att byta.
+Jag hittade då Webbprogrammering på BTH och kände att den verkade mycket intressant.
+Tidigare har jag aldrig tänkt att webb kan vara roligt utan har mer velat fokusera på
+att bygga applikationer i .NET, men när webb började locka mer och mer bestämde jag
+mig för att söka till BTH.
 
-Så, en presentation en bra början. Skriv några ord om dig själv. Jag börjar.
+Nu för tiden sitter jag och funderar och planerar på alla mina projekt. Styrning till
+min hemmabyggda gräsklippar-dumper, steglös växling till gräsklipparen, advancerad
+väckarklocka av en arduino. Under sommaren har jag dock inte kommit längre än att jag
+köpt delar till ovan nämnda styrning och i vintras någon gång köpte jag en massa grejer
+till väckarklockan. Det hade vart gött om projekten kunde hjälpa till lite och bygga sig
+själva...
 
-Mitt namn är Mikael Roos. Född och uppvuxen i Bankeryd, Småland, strax utanför Jönköping, i ett villaområde som byggdes upp samtidigt som vi flyttade in där. Jag gillade landhockey och har spelat bandy och hockey samt gått bowlinggymnasiet i Nässjö. Jag har varit städare, diskare, kallskänka, servitör och kock. På ett bananskal landade jag i Ronneby när jag började högskolan 1990 där och nu är jag kvar med fru, barn och så vidare.
+Vad gäller programmering har jag mitt databas-system med php-api och mithril-frontend
+för dokumentering inom lantbruk på gång sedan februari/mars. Jag började med egen
+template-engine i php men när vi lärde oss mithril i webapp-kursen var det nästan
+självklart att jag skulle använda det istället. Kanske till och med att jag går från
+php helt och skriver api:et i node. Vem vet...
 
-Programmering har alltid intresserat mig sedan 13-årsåldern och min första dator var en Spectravideo 328 med bandspelare.
+En liten del av den tid jag inte jobbat på gården har jag lagt på att lära mig F#. C#
+var tidigare mitt absoluta favorit-språk, och F# har typ allt jag gillar från C# och
+lite till. Självklart är det väldigt annorlunda, functional istället för objectoriented
+osv. Nu har jag till och med hittat något att använda det till; Elmish-WPF!
 
-Om jag skall nämna någon hobby, förutom webbprogrammering, så får det bli att bära sten på sommarstugetomten, och det finns sten så det räcker och blir över.
-
-Till och från får jag för mig att börja på lite hobbies, ett år satsade jag på pokerspel, ett annat år var det geocaching och sedan turfing. Nu ligger jag lågt med hobbies, men något kanske dyker upp...?
-
-Vi syns och hörs i forum och chatt!
-
-/Mikael
+Elmish-WPF är ett bibliotek för att skriva WPF-applikationer i F# med MVU. MVU
+(Model-View-Update) i sin tur är den grundläggande arkitekturen (motsvarande MVC) i Elm,
+ett språk som purely-functional alternativ till JavaScript och dess ramverk. Elm är
+till skillnad från Elmish-WPF officiellt inte production-ready... Dock är det många
+som använt det i produktion med imponerande resultat. Kanske något att få in i någon kurs?
