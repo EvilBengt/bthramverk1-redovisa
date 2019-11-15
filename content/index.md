@@ -1,5 +1,5 @@
 ---
-title: "Vem är jag? | ramverk1"
+title: "Vem är jag?"
 ---
 
 Vem är jag?
