@@ -1,3 +1,5 @@
 #### Redovisa på GitHub
 
-Skriv något kort om ditt redovisa-repo och länka till [repot för me/redovisa på GitHub](XXX).
+I [mitt repo på GitHub](https://github.com/EvilBengt/bthramverk1-redovisa)
+finns all källkod för denna sidan. Repot kommer uppdateras under kursens
+gång.
