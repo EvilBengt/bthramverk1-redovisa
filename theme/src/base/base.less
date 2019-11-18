@@ -4,14 +4,10 @@
 @bgColorHtml: #424242;
 @bgColorBody: #fff;
 @colorBody: #333;
-@baseFontSize: 100.01%;
-
-* {
-    box-sizing: border-box;
-}
+@fontFamilyBody: serif;
 
 html {
-    overflow-y: scroll;  // Always show scrollbar to avoid flickr
+    overflow-y: scroll;
     background-color: @bgColorHtml;
 }
 
@@ -20,13 +16,14 @@ body {
     padding: 0;
     color: @colorBody;
     background-color: @bgColorBody;
-    #desinax-hgrid.font(@fontSizeBody);
+    font: 100.01%/1 @fontFamilyBody;
 }
 
-// Affects all basic typographic elements
-#desinax-hgrid.activateDefaultTypography();
-
-// Responsive images
-img {
-    max-width: 100%;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: @fontFamilyBody;
 }

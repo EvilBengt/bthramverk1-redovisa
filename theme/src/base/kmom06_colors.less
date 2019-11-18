@@ -1,0 +1,96 @@
+@outerBgColor: initial;
+
+@mainBgColor: initial;
+@mainOuterBgColor: initial;
+
+@headerBgColor: initial;
+@headerOuterBgColor: initial;
+
+@footerBgColor: initial;
+@footerOuterBgColor: initial;
+
+@codeSnippetBgColor: initial;
+
+@textColor: initial;
+
+@headingColor: initial;
+@h1Color: initial;
+
+@linkColor: initial;
+@linkVisitedColor: initial;
+
+@navColor: initial;
+@logoColor: initial;
+@hamburgerColor: initial;
+
+.wrap-all {
+    background: @outerBgColor;
+}
+
+.inner-wrap-main {
+    background: @mainBgColor;
+}
+
+.outer-wrap-main {
+    background: @mainOuterBgColor;
+}
+
+.inner-wrap-header {
+    background: @headerBgColor;
+}
+
+.outer-wrap-header {
+    background: @headerOuterBgColor;
+}
+
+.inner-wrap-footer {
+    background: @footerBgColor;
+}
+
+.outer-wrap-footer {
+    background: @footerOuterBgColor;
+}
+
+body {
+    color: @textColor;
+}
+
+h1 {
+    color: @h1Color;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: @headingColor;
+}
+
+a {
+    color: @linkColor;
+}
+
+a:visited {
+    color: @linkVisitedColor;
+}
+
+.my-navbar > li a {
+    color: @navColor;
+}
+
+.my-navbar > li > ul {
+    background: @headerBgColor;
+}
+
+.site-logo-text a {
+    color: @logoColor;
+}
+
+#rm-menu-button {
+    color: @hamburgerColor;
+}
+
+code {
+    background: @codeSnippetBgColor;
+}

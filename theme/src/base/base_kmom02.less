@@ -1,0 +1,52 @@
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+@bgColorHtml: #424242;
+@bgColorBody: #fff;
+@colorBody: #333;
+@fontFamilyBody: serif;
+
+html {
+    overflow-y: scroll;
+    background-color: @bgColorHtml;
+}
+
+body {
+    color: @colorBody;
+    background-color: @bgColorBody;
+    font: 100.01%/1 @fontFamilyBody;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: @fontFamilyBody;
+}
+
+.figure figcaption p {
+    font-size: 14px;
+}
+
+a {
+    color: @accentColor1;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    border-bottom: 5px solid @accentColor2;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+ul,
+ol {
+    list-style: none;
+}

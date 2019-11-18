@@ -1,0 +1,157 @@
+/*!
+ * Stylesheet for design kmom06-designelement.
+ *
+ * This stylesheet is for the design course and kmom06.
+ */
+
+/**
+ * Normalize and reset the style.
+ */
+@import "normalize.css/normalize.less";
+
+
+
+/**
+ * Font Awesome.
+ */
+@import "@fortawesome/fontawesome-free/less/fontawesome.less";
+@import "@fortawesome/fontawesome-free/less/solid.less";
+@import "@fortawesome/fontawesome-free/less/brands.less";
+
+
+
+/**
+ * A responsive menu.
+ */
+@import "@desinax/responsive-menu/less/responsive-menu.less";
+/*@import "@desinax/responsive-menu/less/media-queries.less";*/
+
+
+
+/**
+ * Internal self contained modules, save in directory module/.
+ */
+@import "module/stylechooser.less";  // Just an example module
+
+/**
+ * Import the typographic grid.
+ */
+@import "@desinax/typographic-grid/less/typography-font-families.less";
+@import "@desinax/typographic-grid/less/typography-defaults.less";
+
+
+
+// Show the grid
+.hgrid .inner-wrap {
+    @gridImage: "../img/magic-number-@{magicNumber}.png";
+    #desinax-hgrid.showGrid(@gridImage);
+}
+
+
+
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+@import "base/base_kmom04.less";
+
+
+
+/**
+ * Import the vertical grid.
+ */
+@import "@desinax/vertical-grid/less/grid.less";
+@import "layout/vgrid.less";
+
+
+
+/**
+ * Region-specific base styles
+ */
+@import "base/header_kmom04.less";
+@import "base/nav_kmom03.less";
+
+
+
+@import "layout/regions.less";     // To add style for ?regions
+
+
+
+/**
+ * Figure and figcaption for images and other media using figure/figcaption
+ */
+@import "@desinax/figure/less/asciinema.less";
+@import "@desinax/figure/less/codepen.less";
+@import "@desinax/figure/less/figure.less";
+
+// Enable style from the module and optinally add customized layout
+figure.figure {
+    #desinax-figure.figure();
+}
+
+figure.asciinema {
+    &:extend(figure.figure);
+    #desinax-figure.asciinema();
+}
+
+figure.codepen,
+figure.figure-codepen {
+    &:extend(figure.figure);
+    #desinax-figure.codepen();
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    clear: both;
+}
+
+/**
+ * Preparations for themes
+ */
+@import "base/kmom06_colors.less";
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato|Oswald:700|Share+Tech+Mono');
+
+@outerBgColor: #444;
+
+@mainOuterBgColor: linear-gradient(135deg, #333, #222);
+@mainBgColor: none;
+
+@headerBgColor: @outerBgColor;
+@headerOuterBgColor: @headerBgColor;
+
+@footerBgColor: @headerBgColor;
+@footerOuterBgColor: @footerBgColor;
+
+@codeSnippetBgColor: @outerBgColor;
+
+@textColor: #ddd;
+
+@headingColor: #ff6209;
+@h1Color: #333;
+
+@linkColor: #e82d03;
+@linkVisitedColor: @linkColor;
+
+@navColor: @textColor;
+@logoColor: @headingColor;
+@hamburgerColor: @logoColor;
+
+@fontFamilyHeadings: "Oswald", "sans-serif";
+@fontFamilyBody:     "Lato", "sans-serif";
+@fontFamilyCode:     "Share Tech Mono", "monospace";
+
+h1 {
+    background:#ff6209;
+    border-radius: 0.2em;
+    border: none;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.outer-wrap-main {
+    box-shadow: 0 -20px 20px rgba(0, 0, 0, 0.2) inset;
+}
