@@ -1,3 +1,3 @@
-#### Footer col 3
+#### Mina arbeten i kursen
 
-Med brödtext i ett stycke som säger något trevligt om just detta block, eller kanske en lista av länkar.
+* [GitHub-repo för denna sidan](https://github.com/EvilBengt/bthramverk1-redovisa)

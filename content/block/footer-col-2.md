@@ -1,3 +1,8 @@
-#### Footer col 2
+#### Några verktyg som används
 
-Med brödtext i ett stycke som säger något trevligt om just detta block, eller kanske en lista av länkar.
+* [PHP](https://www.php.net/)
+* [Composer](https://getcomposer.org/)
+* [Node](https://nodejs.org/)
+* [NPM](https://www.npmjs.com/)
+* [Make](https://www.gnu.org/software/make/)
+* [LESS](http://lesscss.org/)
