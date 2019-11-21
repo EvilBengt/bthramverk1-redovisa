@@ -43,6 +43,15 @@ return [
             "text" => "IP",
             "url" => "ip-validering/enkel",
             "title" => "Enkel controller-sida för att validera IPv4- och IPv6-adresser.",
+            "submenu" => [
+                "items" => [
+                    [
+                        "text" => "API-instruktioner",
+                        "url" => "ip-validering/enkel/api",
+                        "title" => "Instruktioner för hur man använder IP-validerings-API:t."
+                    ]
+                ]
+            ]
         ],
         [
             "text" => "Styleväljare",
