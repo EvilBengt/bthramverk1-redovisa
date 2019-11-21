@@ -50,9 +50,9 @@ class PageController implements ContainerInjectableInterface
 
     /**
      * This is the index method action, it handles:
-     * GET mountpoint
-     * GET mountpoint/
-     * GET mountpoint/index
+     * POST mountpoint
+     * POST mountpoint/
+     * POST mountpoint/index
      *
      * @return string
      */
