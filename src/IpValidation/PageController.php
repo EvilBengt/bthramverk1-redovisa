@@ -32,7 +32,7 @@ class PageController implements ContainerInjectableInterface
      * GET mountpoint/
      * GET mountpoint/index
      *
-     * @return string
+     * @return object
      */
     public function indexActionGet() : object
     {
@@ -54,7 +54,7 @@ class PageController implements ContainerInjectableInterface
      * POST mountpoint/
      * POST mountpoint/index
      *
-     * @return string
+     * @return object
      */
     public function indexActionPost() : object
     {
@@ -88,6 +88,23 @@ class PageController implements ContainerInjectableInterface
 
         return $page->render([
             "title" => "IP-validering"
+        ]);
+    }
+
+    /**
+     * Shows a page with instructions and demos for the API.
+     * GET mountpoint/api
+     *
+     * @return object
+     */
+    public function apiActionGet()
+    {
+        $page = $this->di->get("page");
+
+        $page->add("ipValidation/apiInstructions");
+
+        return $page->render([
+            "title" => "API-instruktioner"
         ]);
     }
 }
