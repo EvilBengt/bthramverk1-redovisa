@@ -10,6 +10,11 @@ return [
             "info" => "Simple IP-validation page.",
             "mount" => "enkel",
             "handler" => "\EVB\IpValidation\PageController"
+        ],
+        [
+            "info" => "Simple IP-validation json API.",
+            "mount" => "api",
+            "handler" => "\EVB\IpValidation\JsonController"
         ]
     ]
 ];
