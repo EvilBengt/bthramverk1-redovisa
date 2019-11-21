@@ -7,7 +7,7 @@ return [
     "id" => "rm-menu",
     "wrapper" => null,
     "class" => "rm-default rm-mobile",
- 
+
     // Here comes the menu items
     "items" => [
         [
@@ -38,6 +38,11 @@ return [
             "text" => "Om",
             "url" => "om",
             "title" => "Om denna webbplats.",
+        ],
+        [
+            "text" => "IP",
+            "url" => "ip-validering/enkel",
+            "title" => "Enkel controller-sida för att validera IPv4- och IPv6-adresser.",
         ],
         [
             "text" => "Styleväljare",

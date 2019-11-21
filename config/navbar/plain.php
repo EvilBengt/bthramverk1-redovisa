@@ -5,7 +5,7 @@
 return [
     // Use for styling the menu
     "class" => "my-navbar",
- 
+
     // Here comes the menu items/structure
     "items" => [
         [
@@ -22,6 +22,11 @@ return [
             "text" => "Om",
             "url" => "om",
             "title" => "Om denna webbplats.",
+        ],
+        [
+            "text" => "IP",
+            "url" => "ip-validering/enkel",
+            "title" => "Enkel controller-sida för att validera IPv4- och IPv6-adresser.",
         ],
         [
             "text" => "Styleväljare",
