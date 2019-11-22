@@ -6,7 +6,7 @@ namespace Anax\View;
 
 <h2>Instruktioner</h2>
 <p>
-    För att validera en ip-adress (IPv4 eller IPv6), POST:a till `/ip-validering/api` med ip-adressen i body-parametern "ip".
+    För att validera en ip-adress (IPv4 eller IPv6), POST:a till <code>/ip-validering/api</code> med ip-adressen i body-parametern "ip".
 </p>
 
 <h3>Demo</h3>
