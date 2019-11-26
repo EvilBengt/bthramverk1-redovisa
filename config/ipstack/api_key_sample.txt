@@ -1,0 +1,9 @@
+<?php
+/**
+ * Sample config file for ipstack API key.
+ * In use, this file should be named "api_key.php"
+ */
+
+return [
+    "api_key" => "API KEY GOES HERE!"
+];
