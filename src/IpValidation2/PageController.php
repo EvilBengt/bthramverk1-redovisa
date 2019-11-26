@@ -8,6 +8,7 @@ use Anax\Commons\ContainerInjectableTrait;
 use EVB\IpValidation2\IpValidator;
 use EVB\IpValidation2\IpLocator;
 use EVB\IpValidation2\ClientIpExtractor;
+use EVB\IpValidation2\CurlWrapper;
 
 
 /**
@@ -32,7 +33,7 @@ class PageController implements ContainerInjectableInterface
 
         $clientIp = $clientIpExtractor->getIP($this->di->get("request"));
 
-        $this->renderPage($clientIp, []);
+        return $this->renderPage($clientIp, []);
     }
 
     /**
@@ -51,11 +52,34 @@ class PageController implements ContainerInjectableInterface
 
         $ip = $request->getPost("ip", "");
 
+        $ipLocator->configure(
+            $this->di->get("configuration")->load("ipstack"),
+            new CurlWrapper()
+        );
+
+        $isIPv4 = $ipValidator->validateIPv4($ip);
+        $isIPv6 = $ipValidator->validateIPv6($ip);
+
+        $domain = $isIPv4 || $isIPv6 ? $ipLocator->getDomainName($ip) : "";
+
+        $geo = $ipLocator->getGeoInfo($ip);
+
+        $location = $geo ?
+            $geo["continent"] . " > " .
+            $geo["country"] . " > " .
+            $geo["region"] . " > " .
+            $geo["city"] . " > " .
+            $geo["zip"]
+            : "";
+
         $result = [
-            "isIPv4" => $ipValidator->validateIPv4($ip),
-            "isIPv6" => $ipValidator->validateIPv6($ip),
-            "domain" => $ipLocator->getDomainName($ip)
+            "isIPv4" => $isIPv4,
+            "isIPv6" => $isIPv6,
+            "domain" => $domain,
+            "location" => $location
         ];
+
+        return $this->renderPage($ip, $result);
     }
 
     /**
