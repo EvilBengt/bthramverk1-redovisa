@@ -3,14 +3,14 @@
 namespace Anax\View;
 
 ?><h1>IP-validering</h1>
-<form class="form" method="post" action="<?= url("ip-validering/enkel") ?>">
+<form class="form" method="post" action="<?= url("ip-validering2") ?>">
     <label>
         IPv4- eller IPv6-adress<br/>
         <input class="input ip-input" type="text" name="ip" value="<?= $ip ?>">
     </label>
     <button class="input" type="submit">Validera</button>
 </form>
-<?php if ($result) { ?>
+<?php if (\count($result) > 0) { ?>
     <table class="results">
         <tbody>
             <tr class="result-row <?= $result["isIPv4"] ? "valid" : "invalid" ?>">
@@ -24,6 +24,10 @@ namespace Anax\View;
             <tr class="result-row <?= $result["domain"] ? "valid" : "invalid" ?>">
                 <th>Domän</th>
                 <td><?= $result["domain"] ? $result["domain"] : "Inget resultat" ?></td>
+            </tr>
+            <tr class="result-row <?= $result["location"] ? "valid" : "invalid" ?>">
+                <th>Geografisk position</th>
+                <td><?= $result["location"] ? $result["location"] : "Inget resultat" ?></td>
             </tr>
         </tbody>
     </table>
