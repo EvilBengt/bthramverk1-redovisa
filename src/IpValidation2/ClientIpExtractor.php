@@ -11,7 +11,7 @@ class ClientIpExtractor
     /**
      * Extracts the client's IP-address from supplied request object.
      *
-     * @param Request $request
+     * @param \Anax\Request\Request $request
      * @return string
      */
     public function getIP($request) : string
