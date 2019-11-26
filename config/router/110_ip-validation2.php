@@ -7,14 +7,19 @@ return [
 
     "routes" => [
         [
-            "info" => "Simple IP-validation page.",
-            "mount" => "",
-            "handler" => "\EVB\IpValidation2\PageController"
+            "info" => "Demo page for Json API.",
+            "mount" => "api-demo",
+            "handler" => "\EVB\IpValidation2\ApiDemoController"
         ],
         [
             "info" => "Simple IP-validation json API.",
             "mount" => "api",
             "handler" => "\EVB\IpValidation2\JsonController"
+        ],
+        [
+            "info" => "Simple IP-validation page.",
+            "mount" => "",
+            "handler" => "\EVB\IpValidation2\PageController"
         ]
     ]
 ];
