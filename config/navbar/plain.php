@@ -38,6 +38,20 @@ return [
             ]
         ],
         [
+            "text" => "IP2",
+            "url" => "ip-validering2/",
+            "title" => "Controller-sida för att validera IPv4- och IPv6-adresser.",
+            "submenu" => [
+                "items" => [
+                    [
+                        "text" => "API-instruktioner",
+                        "url" => "ip-validering2/api-demo",
+                        "title" => "Instruktioner för hur man använder IP-validerings-API:t."
+                    ]
+                ]
+            ]
+        ],
+        [
             "text" => "Styleväljare",
             "url" => "style",
             "title" => "Välj stylesheet.",
