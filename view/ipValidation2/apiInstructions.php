@@ -14,8 +14,8 @@ namespace Anax\View;
     Välj någon av följande IP-addresser eller skriv in en egen för att testa API:et.
 </p>
 <form method="POST" action="<?= url("ip-validering2/api") ?>">
-    <input type="hidden" name="ip" value="127.0.0.1">
-    <button type="submit">127.0.0.1</button>
+    <input type="hidden" name="ip" value="8.8.8.8">
+    <button type="submit">8.8.8.8</button>
 </form>
 <form method="POST" action="<?= url("ip-validering2/api") ?>">
     <input type="hidden" name="ip" value="1227.0.0.1">
