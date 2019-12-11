@@ -1,0 +1,9 @@
+<?php
+/**
+ * Sample config file for darksky API key.
+ * In use, this file should be named "api_key.php"
+ */
+
+return [
+    "baseUrl" => "https://api.darksky.net/forecast/API_KEY_GOES_HERE/"
+];
