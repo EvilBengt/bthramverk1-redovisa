@@ -67,6 +67,11 @@ return [
             ]
         ],
         [
+            "text" => "Väder",
+            "url" => "weather",
+            "title" => "Senaste månadens, dagens och kommande tidens väder"
+        ],
+        [
             "text" => "Styleväljare",
             "url" => "style",
             "title" => "Välj stylesheet.",
