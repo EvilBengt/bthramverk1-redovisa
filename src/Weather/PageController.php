@@ -26,61 +26,51 @@ class PageController implements ContainerInjectableInterface
     public function indexActionGet() : object
     {
         $request = $this->di->get("request");
-        $config = $this->di->get("configuration");
+        $weather = $request->getGet("useExample") ? $this->di->get("exampleWeather") : $this->di->get("weather");
 
-        $weatherConfig = $config->load("weather");
-        $weather;
-
-        $useExample = $request->getGet("useExample");
-
-        if ($useExample) {
-            $weather = new ExampleWeather(
-                $weatherConfig["items"][1]["config"]["example"]
-            );
-        } else {
-            $weather = new Weather(
-                $weatherConfig["items"][0]["config"]["baseUrl"],
-                new MultiCurl()
-            );
-        }
-
-        $search = [
-            "lat" => $request->getGet("lat", ""),
-            "long" => $request->getGet("long", ""),
-            "ip" => $request->getGet("ip", "")
-        ];
-
-        $result = [];
-
+        $forecasts = [];
+        $mapLink = "";
         $error = "";
 
-        if ($search["lat"] && $search["long"] || $useExample) {
-            $lat = $request->getGet("lat");
-            $long = $request->getGet("long");
+        $lat = "";
+        $long = "";
+        $ip = $request->getGet("ip", "");
 
-            $result = $weather->getWeather($lat, $long);
-        } else if ($search["ip"]) {
-            $ipLocator = new IpLocator();
-            $ipLocatorConfig = $config->load("ipstack");
-            $ipLocator->configure($ipLocatorConfig, new CurlWrapper());
+        if ($ip) {
+            $ipLocator = $this->di->get("ipLocator");
 
-            $ipLocation = $ipLocator->getGeoInfo($search["ip"]);
+            $ipLocation = $ipLocator->getGeoInfo($ip);
 
             if ($ipLocation && $ipLocation["latitude"] && $ipLocation["longitude"]) {
-                $result = $weather->getWeather($ipLocation["latitude"], $ipLocation["longitude"]);
+                $lat = $ipLocation["latitude"];
+                $long = $ipLocation["longitude"];
             } else {
-                $result = "Inga koordinater hittades för den IP-adressen.";
+                $error = "Inga koordinater hittades för den IP-adressen.";
+            }
+        } else {
+            $lat = $request->getGet("lat", "");
+            $long = $request->getGet("long", "");
+        }
+
+        if (!$error && $lat && $long) {
+            $forecasts = $weather->getWeather($lat, $long);
+            if (\is_string($forecasts)) {
+                $error = $forecasts;
+                $forecasts = [];
             }
         }
 
-        if (\is_string($result)) {
-            $error = $result;
-            $result = [];
-        } else {
-            $result["mapLink"] = (new MapGenerator())->MakeLink((float)$search["lat"], (float)$search["long"]);
+        if (!$error && $forecasts) {
+            $mapGenerator = $this->di->get("mapGenerator");
+
+            $mapLink = $mapGenerator->MakeLink((float)$lat, (float)$long);
         }
 
-        return $this->renderPage($search, $result, $error);
+        return $this->renderPage([
+            "lat" => $lat,
+            "long" => $long,
+            "ip" => $ip
+        ], $forecasts, $mapLink, $error);
     }
 
     /**
@@ -90,7 +80,7 @@ class PageController implements ContainerInjectableInterface
      * @param array $result
      * @return object
      */
-    protected function renderPage(array $search, array $result, string $error) : object
+    protected function renderPage(array $search, array $result, string $mapLink, string $error) : object
     {
         $page = $this->di->get("page");
 
@@ -104,7 +94,7 @@ class PageController implements ContainerInjectableInterface
             ]);
         } else if ($result) {
             $page->add("weather/map", [
-                "link" => $result["mapLink"]
+                "link" => $mapLink
             ]);
             $page->add("weather/result", [
                 "forecast" => $result[0],
