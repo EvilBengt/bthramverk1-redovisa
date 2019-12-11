@@ -5394,3 +5394,14 @@ html {
 .invalid {
   background-color: #ff3f34;
 }
+.table-weather td,
+.table-weather th {
+  white-space: nowrap;
+  padding: 0.3rem 0.5rem;
+}
+.button {
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding: 0.3rem 1rem;
+  margin: 1rem 0;
+}
