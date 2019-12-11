@@ -29,7 +29,7 @@ class IpLocator
      */
     public function getGeoInfo(string $ip) : array
     {
-        $url = self::IPSTACK_BASE_URL . $ip . "?access_key=" . $this->ipstackApiKey;
+        $url = self::IPSTACK_BASE_URL . $ip . "?access_key=" . $this->apiKey;
 
         $response = \json_decode($this->curl->fetch($url), true);
 
