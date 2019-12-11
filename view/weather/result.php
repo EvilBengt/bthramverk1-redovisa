@@ -32,7 +32,7 @@ namespace Anax\View;
             <th>Risk, nederbörd</th>
             <th>Temperatur</th>
             <th>Känns som</th>
-            <th>Vindhastighet (byar)</th>
+            <th colspan="2">Vindhastighet (byar)</th>
         </tr>
     </thead>
     <tbody>
@@ -43,7 +43,8 @@ namespace Anax\View;
                 <td><?= $hour["precipProbability"] ?></td>
                 <td><?= $hour["temperature"] ?></td>
                 <td><?= $hour["apparentTemperature"] ?></td>
-                <td><?= $hour["windSpeed"] ?> (<?= $hour["windGust"] ?>)</td>
+                <td><?= $hour["windSpeed"] ?></td>
+                <td>(<?= $hour["windGust"] ?>)</td>
             </tr>
         <?php } ?>
     </tbody>
@@ -63,7 +64,7 @@ namespace Anax\View;
             <th>Risk, nederbörd</th>
             <th colspan="3">Temperatur</th>
             <th colspan="3">Känns som</th>
-            <th>Vindhastighet (byar)</th>
+            <th colspan="2">Vindhastighet (byar)</th>
         </tr>
     </thead>
     <tbody>
@@ -78,7 +79,8 @@ namespace Anax\View;
                 <td><?= $day["apparentTemperatureMin"] ?></td>
                 <td>-</td>
                 <td><?= $day["apparentTemperatureMax"] ?></td>
-                <td><?= $day["windSpeed"] ?> (<?= $day["windGust"] ?>)</td>
+                <td><?= $day["windSpeed"] ?></td>
+                <td>(<?= $day["windGust"] ?>)</td>
             </tr>
         <?php } ?>
     </tbody>
@@ -95,7 +97,7 @@ namespace Anax\View;
             <th>Risk, nederbörd</th>
             <th colspan="3">Temperatur</th>
             <th colspan="3">Känns som</th>
-            <th>Vindhastighet (byar)</th>
+            <th colspan="2">Vindhastighet (byar)</th>
         </tr>
     </thead>
     <tbody>
@@ -111,7 +113,8 @@ namespace Anax\View;
                 <td><?= $day["apparentTemperatureMin"] ?></td>
                 <td>-</td>
                 <td><?= $day["apparentTemperatureMax"] ?></td>
-                <td><?= $day["windSpeed"] ?> (<?= $day["windGust"] ?>)</td>
+                <td><?= $day["windSpeed"] ?></td>
+                <td>(<?= $day["windGust"] ?>)</td>
             </tr>
         <?php } ?>
     </tbody>
