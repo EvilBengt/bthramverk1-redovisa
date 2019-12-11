@@ -9,7 +9,16 @@ return [
             "active" => true,
             "shared" => true,
             "callback" => function () {
-                return new EVB\Weather\IpLocator();
+                $config = $this->get("configuration");
+
+                $ipstackConfig = $config->load("ipstack");
+
+                $ipLocator = new EVB\Weather\IpLocator(
+                    $ipstackConfig["items"][0]["config"]["api_key"],
+                    $this->get("curlWrapper")
+                );
+
+                return $ipLocator;
             }
         ]
     ]
