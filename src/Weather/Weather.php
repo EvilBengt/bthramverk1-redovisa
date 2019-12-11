@@ -65,19 +65,16 @@ class Weather
         foreach ($urls as $i => $url) {
             $urls[$i] = $this->baseUrl
                 . $url
-                . "?lang=sv&units=auto";
+                . "?lang=sv&units=si";
         }
 
         $result = $this->multiCurl->execute($urls);
 
         if (\array_key_exists("error", $result[0])) {
-            echo "<pre>";
-            print_r($result);
-            die();
-            if ($result["code"] == 400) {
+            if ($result[0]["code"] == 400) {
                 return "Ogiltiga koordinater.";
             }
-            return "Dagens förfrågningar har tyvärr tagit slut.";
+            return "Det verkar som att dagens förfrågningar har tagit slut. Använd \"Sök med exempel-väder\".";
         }
 
         return $result;
