@@ -100,10 +100,11 @@ class PageController implements ContainerInjectableInterface
                 "forecast" => $result[0],
                 "historical" => \array_slice($result, 1)
             ]);
+            $page->add("weather/attribution");
         }
 
         return $page->render([
-            "title" => "IP-validering"
+            "title" => "Väder"
         ]);
     }
 }
