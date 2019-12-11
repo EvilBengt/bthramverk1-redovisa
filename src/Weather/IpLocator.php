@@ -11,19 +11,13 @@ use EVB\IpValidation2\CurlWrapper;
 class IpLocator
 {
     private const IPSTACK_BASE_URL = "http://api.ipstack.com/";
-    private $ipstackApiKey;
-
+    private $apiKey;
     private $curl;
 
-    /**
-     * Configure the IpLocator.
-     *
-     * @param array $config
-     * @return void
-     */
-    public function configure(array $config, CurlWrapper $curl) : void
+
+    public function __construct($apiKey, $curl)
     {
-        $this->ipstackApiKey = $config["items"][0]["config"]["api_key"];
+        $this->apiKey = $apiKey;
         $this->curl = $curl;
     }
 
