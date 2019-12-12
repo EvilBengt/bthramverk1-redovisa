@@ -26,7 +26,7 @@ class PageController implements ContainerInjectableInterface
     public function indexActionGet() : object
     {
         $request = $this->di->get("request");
-        $weather = $request->getGet("useExample") ? $this->di->get("exampleWeather") : $this->di->get("weather");
+        $weather = $request->getGet("search") == "example" ? $this->di->get("exampleWeather") : $this->di->get("weather");
 
         $forecasts = [];
         $mapLink = "";
