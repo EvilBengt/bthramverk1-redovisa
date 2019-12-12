@@ -8,7 +8,7 @@ use Anax\Commons\ContainerInjectableTrait;
 use EVB\IpValidation2\CurlWrapper;
 
 /**
- * Controller for IP validation page.
+ * Controller for Weather page.
  *
  * @SuppressWarnings(PHPMD.TooManyPublicMethods)
  */
