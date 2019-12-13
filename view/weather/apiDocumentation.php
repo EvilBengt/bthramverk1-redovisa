@@ -24,6 +24,8 @@ namespace Anax\View;
 <p>
     Ange antingen <code>LAT</code> och <code>LONG</code>, <em>eller</em> <code>IP</code>.
     Om <code>IP</code> anges, ignoreras <code>LAT</code> och <code>LONG</code>.
+    Om <code>METOD</code> är "example" används hårdkodad data för att spara på API-förfrågningar.
+    Alla andra värden ger en vanlig sökning som använder väder-API:et.
 </p>
 
 <h2>Om</h2>
