@@ -51,6 +51,8 @@ class PageControllerTest extends TestCase
 
         $di->get("cache")->setPath(ANAX_INSTALL_PATH . "/test/cache");
 
+        $di->setShared("ipLocator", new MockIpLocator([]));
+
         $controller = new PageController();
         $controller->setDI($di);
 
