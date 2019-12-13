@@ -17,6 +17,25 @@ class JsonController extends PageController implements ContainerInjectableInterf
     use ContainerInjectableTrait;
 
     /**
+     * Controller action for showing documentation
+     * as a web page.
+     *
+     * GET
+     *
+     * @return object
+     */
+    public function docActionGet() : object
+    {
+        $page = $this->di->get("page");
+
+        $page->add("weather/apiDocumentation");
+
+        return $page->render([
+            "title" => "API-dokumentation | Väder"
+        ]);
+    }
+
+    /**
      * Helper method for rendering the response.
      *
      * @param string $ip

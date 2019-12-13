@@ -54,7 +54,16 @@ return [
         [
             "text" => "Väder",
             "url" => "weather",
-            "title" => "Senaste månadens, dagens och kommande tidens väder"
+            "title" => "Senaste månadens, dagens och kommande tidens väder",
+            "submenu" => [
+                "items" => [
+                    [
+                        "text" => "API-instruktioner",
+                        "url" => "weather/api/doc",
+                        "title" => "Instruktioner för hur man använder väder-API:t."
+                    ]
+                ]
+            ]
         ],
         [
             "text" => "Styleväljare",
