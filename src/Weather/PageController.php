@@ -80,7 +80,7 @@ class PageController implements ContainerInjectableInterface
      * @param array $result
      * @return mixed
      */
-    protected function renderPage(array $search, array $result, string $mapLink, string $error)
+    public function renderPage(array $search, array $result, string $mapLink, string $error)
     {
         $page = $this->di->get("page");
 

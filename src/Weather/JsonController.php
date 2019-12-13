@@ -42,7 +42,7 @@ class JsonController extends PageController implements ContainerInjectableInterf
      * @param array $result
      * @return mixed
      */
-    protected function renderPage(array $search, array $result, string $mapLink, string $error)
+    public function renderPage(array $search, array $result, string $mapLink, string $error)
     {
         $response = [];
 
