@@ -11,7 +11,7 @@ class MockIpLocator extends IpLocator
         $this->data = $data;
     }
 
-    public function getGeoInfo(string $ip)
+    public function getGeoInfo(string $ip) : array
     {
         return $this->data;
     }
