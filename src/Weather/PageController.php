@@ -21,9 +21,9 @@ class PageController implements ContainerInjectableInterface
      *
      * GET
      *
-     * @return object
+     * @return mixed
      */
-    public function indexActionGet() : object
+    public function indexActionGet()
     {
         $request = $this->di->get("request");
         $weather = $request->getGet("search") == "example" ? $this->di->get("exampleWeather") : $this->di->get("weather");
@@ -78,9 +78,9 @@ class PageController implements ContainerInjectableInterface
      *
      * @param string $ip
      * @param array $result
-     * @return object
+     * @return mixed
      */
-    protected function renderPage(array $search, array $result, string $mapLink, string $error) : object
+    protected function renderPage(array $search, array $result, string $mapLink, string $error)
     {
         $page = $this->di->get("page");
 
