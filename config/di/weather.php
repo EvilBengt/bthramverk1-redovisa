@@ -14,7 +14,7 @@ return [
                 $weatherConfig = $config->load("weather");
 
                 $weather = new EVB\Weather\Weather(
-                    $weatherConfig["items"][0]["config"]["baseUrl"],
+                    $weatherConfig["items"][0]["config"]["darkSkyBaseUrl"],
                     $this->get("multiCurl")
                 );
 

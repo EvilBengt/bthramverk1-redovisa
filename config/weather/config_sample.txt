@@ -1,9 +1,10 @@
 <?php
 /**
- * Sample config file for darksky API key.
- * In use, this file should be named "api_key.php"
+ * Sample config file for weather services.
+ * In use, this file should be named "config.php"
  */
 
 return [
-    "baseUrl" => "https://api.darksky.net/forecast/API_KEY_GOES_HERE/"
+    "darkSkyBaseUrl" => "https://api.darksky.net/forecast/API_KEY_GOES_HERE/",
+    "ipstackApiKey" => "API_KEY_GOES_HERE"
 ];

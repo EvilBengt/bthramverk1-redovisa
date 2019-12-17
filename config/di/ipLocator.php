@@ -14,7 +14,7 @@ return [
                 $ipstackConfig = $config->load("ipstack");
 
                 $ipLocator = new EVB\Weather\IpLocator(
-                    $ipstackConfig["items"][0]["config"]["api_key"],
+                    $ipstackConfig["items"][0]["config"]["ipstackApiKey"],
                     $this->get("curlWrapper")
                 );
 
