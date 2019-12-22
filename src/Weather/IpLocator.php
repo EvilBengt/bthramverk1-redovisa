@@ -2,8 +2,6 @@
 
 namespace EVB\Weather;
 
-use EVB\IpValidation2\CurlWrapper;
-
 
 /**
  * Simple class for locating IP-addresses.

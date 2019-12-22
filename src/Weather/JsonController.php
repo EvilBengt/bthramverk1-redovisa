@@ -5,8 +5,6 @@ namespace EVB\Weather;
 use Anax\Commons\ContainerInjectableInterface;
 use Anax\Commons\ContainerInjectableTrait;
 
-use EVB\IpValidation2\CurlWrapper;
-
 /**
  * Controller for Weather API.
  *
