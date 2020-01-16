@@ -96,6 +96,25 @@ return [
             ]
         ],
         [
+            "text" => "Böcker",
+            "url" => "book",
+            "title" => "Ett exempel med böcker",
+            "submenu" => [
+                "items" => [
+                    [
+                        "text" => "Skapa bok",
+                        "url" => "book/create",
+                        "title" => "Formulär för att lägga till en bok i systemet."
+                    ],
+                    [
+                        "text" => "Radera bok",
+                        "url" => "book/delete",
+                        "title" => "Formulär för att radera en bok ur systemet."
+                    ],
+                ]
+            ]
+        ],
+        [
             "text" => "Styleväljare",
             "url" => "style",
             "title" => "Välj stylesheet.",
